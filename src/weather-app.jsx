@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+
 function Weather(){
     return(<div>
         <button>

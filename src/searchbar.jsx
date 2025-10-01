@@ -1,8 +1,8 @@
 
 
-function Search(){
+function Search({onSearch}){
     return(<div>
-        <input type="text" />
+        <input type="text" placeholder="Search..." />
         <button>Enter</button>
     </div>)
 
