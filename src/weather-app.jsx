@@ -1,9 +1,9 @@
 import React, {useState} from "react"
-function weather(){
+function Weather(){
     return(<div>
         <button>
-            <h1>what the heck </h1>
+            <h1>Weather Heck </h1>
         </button>
     </div>)
 }
-export default weather
+export default Weather
