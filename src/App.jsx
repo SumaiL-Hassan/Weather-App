@@ -11,8 +11,19 @@ function App() {
   const [display, setDisplay] = useState(false)
   const [error, setError] = useState (null)
 
-function FetchWeather(){
+
+async function fetchWeather(city) {
+  setDisplay(true)
   
+  try{
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=70adcf4f0fea4c149da378190db40d86`);
+    const data = await response.json();
+    setWeather(data)
+  } catch{
+    setError("Fail to fetch");
+  }
+  
+  setDisplay(false)
 }
 
   return (

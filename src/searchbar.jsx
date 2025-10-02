@@ -1,8 +1,13 @@
+import { useState } from "react"
 
 
-function Search({onSearch}){
+function Search(){
+    const [city, setCity] = useState(null);
+    function searchCity(){
+        
+    }
     return(<div>
-        <input type="text" placeholder="Search..." />
+        <input type="text" placeholder="Search..." value={city}/>
         <button>Enter</button>
     </div>)
 
