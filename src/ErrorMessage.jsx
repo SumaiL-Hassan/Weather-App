@@ -1,4 +1,4 @@
-function ErrorMess(){
+function ErrorMess({error}){
     return(<></>)
 
 }

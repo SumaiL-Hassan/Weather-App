@@ -29,10 +29,10 @@ async function fetchWeather(city) {
   return (
     <>
       
-      <Weather/>
-      <Search/>
-      <Display/>
-      <ErrorMess/>
+      {weather && <Weather weather={weather}/>}
+      <Search weatherData = {fetchWeather}/>
+      {display && <Display /> } 
+      {error && <ErrorMess error={error}/>}
       
     </>
     

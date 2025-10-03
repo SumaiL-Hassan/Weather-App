@@ -1,5 +1,5 @@
 
-function Weather(){
+function Weather({weather}){
     return(<div>
         <button>
             <h1>Weather Heck </h1>

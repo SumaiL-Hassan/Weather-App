@@ -1,4 +1,4 @@
-function Display(){
+function Display(DisplayWeather){
     return(<></>)
 }
 export default Display
