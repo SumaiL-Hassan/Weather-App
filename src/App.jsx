@@ -6,10 +6,10 @@ import Search from './searchbar'
 import { useState } from 'react'
 
 function App() {
-  const [search, setSearch] = useState("")
-  const [weather, setWeather] = useState(null)
-  const [display, setDisplay] = useState(false)
-  const [error, setError] = useState (null)
+ const [search, setSearch] = useState("") //for searching 
+  const [weather, setWeather] = useState(null) //
+  const [display, setDisplay] = useState(false) // for fetch
+  const [error, setError] = useState (null) //for errors 
 
 
 async function fetchWeather(city) {
@@ -18,7 +18,8 @@ async function fetchWeather(city) {
   try{
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=70adcf4f0fea4c149da378190db40d86`);
     const data = await response.json();
-    setWeather(data)
+    setWeather(data);
+    console.log(data);
   } catch{
     setError("Fail to fetch");
   }
@@ -26,12 +27,12 @@ async function fetchWeather(city) {
   setDisplay(false)
 }
 
+
   return (
     <>
       
       {weather && <Weather weather={weather}/>}
       <Search weatherData = {fetchWeather}/>
-      {display && <Display /> } 
       {error && <ErrorMess error={error}/>}
       
     </>
