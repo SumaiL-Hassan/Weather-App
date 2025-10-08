@@ -2,9 +2,10 @@ import { useState } from "react"
 
 
 function Search({weatherData}){
-    const [city, setCity] = useState(null);
+    const [city, setCity] = useState("");
     
 function handleSearch(){
+    if(city.trim()==="") return;
     weatherData(city);
 }
 
