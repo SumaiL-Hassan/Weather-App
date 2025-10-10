@@ -2,6 +2,8 @@ function Display({weather}){
     const data = {
         name: weather.name,
         temp: weather.main.temp,
+        humi: weather.main.humidity,
+        wind: weather.wind.speed
         
 
     }
@@ -9,6 +11,8 @@ function Display({weather}){
     return(<div>
     <h2>{data.name}</h2>
     <p>Temperature: {temCel}</p>
+    <p>Humidity: {data.humi}</p>
+    <p>Wind: {data.wind}</p>
     <p></p>
   </div>)
 }
